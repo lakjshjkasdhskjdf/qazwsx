@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t1</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            max-width: 640px;
+            height: 1030px;
+            background-color: rgba(37, 193, 221, 0.5);
+        }
+        .div1{
+            width: 100%;
+            height: 4%;
+            display: flex;
+            align-items: center;
+        }
+        .as{
+            display: flex;
+            font-family: "华文琥珀";
+            color:gold;
+            text-shadow: 2px 2px #000;
+            width: 68%;
+            height:100%;
+            left:25%;
+            font-size: 35px;
+            line-height:35px;
+            text-align: center;
+        }
+        .an{
+            display: flex;
+            width: 16%;
+            height: 75%;
+            left:70%;
+            font-size: 30px;
+            border-radius: 15px;
+            background-color:rgb(245, 251, 251);
+            text-align: center;
+            line-height: 75%;
+            color: black;
+            font-family: "隶书";
+        }
+        .g{
+            display: block;
+            width:100%;
+            height:100%;
+            border-radius: 15px;
+
+        }
+        a:link,a:visited{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            background-color:gold;
+        }
+
+        .k{
+            width: 67%;
+            position: absolute;
+            text-align: center;
+            bottom:5%;
+            right: 5%;
+        }
+        p{
+            font-size: 25px;
+        }
+        img{
+            width: 100%;
+        }
+
+        h2{
+            right:5%;
+            font-size: 35px;
+            font-family: "华文行楷";
+            font-style: italic;
+            display: flex;
+            
+        }
+        .rt{
+            display: flex;
+            position: relative;
+
+        }
+        @media screen and (max-width:640px){
+            .asd{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    .image_list{
+      	margin-top:10%;
+        position: absolute;
+        top:50%;
+        left: 0%;
+      }
+      .image_list img{
+        width: 170px;
+        height: 100px;
+        top:0%;
+      	opacity:0.8;
+      }
+      .image_list img:hover{
+      	opacity:1;
+      }
+
+
+      #bg{
+      	position:absolute;
+      	top:0px;
+      	left:0px;
+      	background-color:#000000;
+      	background-repeat:no-repeat;
+      	background-position:center;
+      	background-size:95% auto;
+      	display:none;
+      }
+
+    
+      .close_btn{
+        position:absolute;
+      	top:5px;
+      	right:5px;
+        width:5%;
+        height:5%;
+      	cursor:pointer;
+      	display:none;
+      }
+    </style>
+
+
+      </style>
+      <script type="text/javascript">
+
+        function showImage(){
+          //背景层图片
+          document.getElementById("bg").style.backgroundImage = "url(img/cinama.JPG)";
+          //显示黑色背景层
+          document.getElementById("bg").style.display = "block";
+          //显示关闭按扭
+          document.getElementsByClassName("close_btn")[0].style.display = "block";
+        }
+
+        function closeImage(){
+            //隐藏黑色背景
+            document.getElementById("bg").style.display = "none";
+            //隐藏关闭按扭
+            document.getElementsByClassName("close_btn")[0].style.display = "none";
+        }
+      </script>
+
+
+</head>
+<body>
+    <div class="a">
+        <div class="div1">
+            <div class="as">濮院古镇梅泾剧场</div>
+            <div class="an"><a class="g" href="#">分享</a></div>
+            <div class="an"><a class="g" href="d.html">返回</a></div>
+        </div>
+
+        <div class="rt">
+            <img src="img/cinama.JPG"/></div>
+
+            <div class="k">
+                <h2>梅泾剧场</h2>
+                <p>1947年春节，观前街的梅泾剧场隆重开业，自此濮院有了自己的室内剧场。</p>
+                <p> 剧场可同时容纳观众300余人，长木板钉在木架上当凳子，靠油灯照明</p>
+                <p>当年每天演出2场，逢年过节加演一场，戏演过一半，就开门放客，不再收票，称之谓“看放戏”。</p>
+                <p>当时演出的大多为绍兴戏，其次为京剧。</p>
+                <p>著名演员孙伯令、王少楼的《长板坡》《四季春》《武家坡》和陈鹤皋的绍兴大板《龙虎斗》均在此戏园里演过。</p>
+            </div>
+    
+
+    <div class="image_list">
+        <img src="img/76.jpg" title="点击查看大图" onclick="showImage()" /><br/>
+        <img src="img/76.jpg" title="点击查看大图" onclick="showImage()" /><br/>
+        <img src="img/76.jpg" title="点击查看大图" onclick="showImage()" /><br/>
+        <img src="img/76.jpg" title="点击查看大图" onclick="showImage()" />
+      </div>
+      
+      <!-- 黑色背景层 -->
+      <div id="bg"></div>
+  
+      <!-- 关闭按扭 -->
+      <img class="close_btn" src="img/delete.png" title="关闭" onclick="closeImage()" />
+
+    </div>
+</body>
+</html>
